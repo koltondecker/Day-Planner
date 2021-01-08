@@ -2,15 +2,15 @@
 $(document).ready(function() {
 
 const currentDate = moment().format("dddd, MMMM Do, YYYY");
-const currentHour = moment().format("H");
-//const currentHour = 9;
+// const currentHour = moment().format("H");
+const currentHour = 9;
 var textAreaArray = [];
 var textAreaObj = {
     name: "",
     text: ""
 };
 
-//populateTextAreas();
+populateTextAreas();
 
 $("#currentDay").text(currentDate);
 
@@ -54,9 +54,19 @@ function populateTextAreas() {
         }
     }
     else {
-        textAreaArray.push(textAreaObj);
+        if ( textAreaObj.name !== "" && textAreaObj.text !== "") {
+            textAreaArray.push(textAreaObj);
+        }
     }
     localStorage.setItem("textAreaArray", JSON.stringify(textAreaArray));
+    
+    for (i = 0; i < textAreaArray.length; i++) {
+        for (j = 0; j < $(".text-box").length; j++) {
+            if ($(".text-box")[j].id === textAreaArray[i].name) {
+                $(".text-box")[j].value = textAreaArray[i].text;
+            }
+        }
+    }
 }
 
 $(".saveBtn").on("click", function(e) {
