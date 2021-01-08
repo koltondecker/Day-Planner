@@ -30,6 +30,10 @@ textarea{
   border-radius: 15px;
 }
 
+.container {
+  width: 50%;
+}
+
 .row {
   white-space: pre-wrap;
   height: 80px;
@@ -37,9 +41,25 @@ textarea{
 }
 
 .hour {
+  display: block;
+  height: 100px;
+  width: 15%;
+  float: left;
+  position: relative;
+  align-content: center;
+  text-align: center;
+  justify-content: center;
   background-color: #ffffff;
   color: #000000;
   border-top: 1px dashed #000000;
+}
+
+.text-box {
+  display: block;
+  height: 100px;
+  width: 70%;
+  float: left;
+  background-color: grey;
 }
 
 .past {
@@ -58,6 +78,9 @@ textarea{
 }
 
 .saveBtn {
+  display: block;
+  height: 100px;
+  width: 15%;
   border-left: 1px solid black;
   border-top-right-radius: 15px;
   border-bottom-right-radius: 15px;
