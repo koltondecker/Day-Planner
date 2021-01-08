@@ -20,6 +20,8 @@ for (i = 0; i < $(".text-box").length; i++) {
 
     if (parseInt(currentTextBox.dataset.value) < parseInt(currentHour)) {
         currentTextBox.classList.add("past");
+        currentTextBox.setAttribute("disabled", "");
+        console.log(currentTextBox);
     }
     else if ((parseInt(currentTextBox.dataset.value)) === parseInt(currentHour)) {
         currentTextBox.classList.add("present");
