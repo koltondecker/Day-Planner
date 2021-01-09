@@ -2,8 +2,8 @@
 $(document).ready(function() {
 
 const currentDate = moment().format("dddd, MMMM Do, YYYY");
-// const currentHour = moment().format("H");
-const currentHour = 9;
+const currentHour = moment().format("H");
+// const currentHour = 9;
 var textAreaArray = [];
 var textAreaObj = {
     name: "",
