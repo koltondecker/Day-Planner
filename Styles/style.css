@@ -91,3 +91,6 @@ textarea{
   transition: all .3s ease-in-out;
 }
 
+#clear-button {
+  margin-bottom: 100px;
+}
