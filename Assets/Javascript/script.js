@@ -1,9 +1,10 @@
 //Initial Javascript File
 $(document).ready(function() {
 
-    var currentDate = moment().format("dddd, MMMM Do, YYYY");
+    var initialDate = moment().format("dddd, MMMM Do, YYYY");
     var initialHour = moment().format("H");
     var curHourCheck = initialHour;
+    var curDayCheck = initialDate;
 
     //Declaring empty array and empty object for textbox areas to append to localstorage.
     var textAreaArray = [];
@@ -16,12 +17,13 @@ $(document).ready(function() {
     populateTextAreas();
     updateTextBoxColors(initialHour);
 
-    $("#currentDay").text(currentDate);
+    $("#currentDay").text(initialDate);
 
     //Appends time to page continually in real time. Function repeats every second.
     updateTime();
     function updateTime() {
         const currentTime = moment().format("h:mm:ss a");
+        const currentDate = moment().format("dddd, MMMM Do, YYYY");
         var currentHour = moment().format("H");
 
         $("#currentTime").text(currentTime);
@@ -31,6 +33,11 @@ $(document).ready(function() {
             changeHour();
             curHourCheck = currentHour;
         }
+        //Checks if day date rolls over to a new day and updates the page to display the new day.
+        if (currentDate !== curDayCheck) {
+            $("#currentDay").text(initialDate);
+        }
+
         setTimeout(updateTime, 1000);
     }
 
