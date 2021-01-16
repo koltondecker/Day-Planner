@@ -23,13 +23,17 @@
   </head>
 
   <body>
+    <!-- Uses bootsrap jumbotron header with p tags for the title, short description, and 2 elements where javascript appends the date and time using moment.js -->
     <header class="jumbotron">
       <h1 class="display-3">Work Day Scheduler</h1>
       <p class="lead">A simple calendar app for scheduling your work day</p>
       <p id="currentDay" class="lead"></p>
       <p id="currentTime" class="lead"></p>
     </header>
+    <!-- A massive div container where all of the time blocks of the page are stored. -->
     <div id="time-block" class="container">
+      <!-- Each time block is a form where there is a label to the left, textarea in the middle, 
+      and button to the right with appropriate id's, classes, and data values for javascript to utilize. -->
       <form>
         <label for="eight-am" class="hour">8am</label>
         <textarea id="eight-am" class="text-box am" name="eight-am" data-value="8"></textarea>

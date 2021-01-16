@@ -79,26 +79,29 @@ $(document).ready(function() {
         var textAreaLocalStorage = JSON.parse(localStorage.getItem("textAreaArray"));
         if (textAreaLocalStorage !== null) {
             textAreaArray = textAreaLocalStorage;
-            
+            //Loops through the array of objects and updates the text of the object if it already exists in the array. 
             for (i = 0; i < textAreaArray.length; i++) {
                 if(textAreaArray[i].name === textAreaObj.name) {
                     textAreaArray[i].text = textAreaObj.text;
                 }
             }
-            
+            //Checks if text area object already exists in the array and pushed a new object if it doesn't exist and as long as the text area isn't blank. 
             if(textAreaArray.some(e => e.name === textAreaObj.name) === false) {
                 if ( textAreaObj.name !== "" && textAreaObj.text !== "") {
                     textAreaArray.push(textAreaObj);
                 }
             }
         }
+        //If local storage is empty, code above is skipped and code below is executed instead which just pushes text area object to array if it isn't empty. 
         else {
-            if ( textAreaObj.name !== "" && textAreaObj.text !== "") {
+            if (textAreaObj.name !== "" && textAreaObj.text !== "") {
                 textAreaArray.push(textAreaObj);
             }
         }
+        //Stores our array of objects in local storage.
         localStorage.setItem("textAreaArray", JSON.stringify(textAreaArray));
         
+        //Loops through array from local storage and loads text box areas with info previously saved there.
         for (i = 0; i < textAreaArray.length; i++) {
             for (j = 0; j < $(".text-box").length; j++) {
                 if ($(".text-box")[j].id === textAreaArray[i].name) {
