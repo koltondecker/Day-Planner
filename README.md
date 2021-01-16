@@ -40,7 +40,7 @@ WHEN I refresh the page
 - Hour blocks that are in the past not only turn grey but also are given an attribute of 'disabled' to lock the text area from accepting input:
 <br>
 <br>
-<img src="assets/images/grey-boxes-locked.png" alt="Hour blocks in past turn grey and lock out input." width="50%">
+<img src="Assets/images/grey-boxes-locked.png" alt="Hour blocks in past turn grey and lock out input." width="50%">
 <br>
 <br>
 
@@ -51,7 +51,7 @@ WHEN I refresh the page
 - Clear Button at bottom of page clears all text boxes and clears local storage to provide a clean planner to work from:
 <br>
 <br>
-<img src="assets/images/clear-boxes-and-local-storage.png" alt="Clear button clears text boxes and local storage." width="50%">
+<img src="Assets/images/clear-boxes-and-local-storage.png" alt="Clear button clears text boxes and local storage." width="50%">
 <br>
 <br>
 <hr>
@@ -62,11 +62,11 @@ WHEN I refresh the page
 - Each time block has its own text box and save button that are linked to one another. Clicking a save button to the right of a text box saves that text box to a local storage array of objects:
 <br>
 <br>
-<img src="assets/images/text-boxes-no-save.png" alt="No text boxes are saved." width="50%">
+<img src="Assets/images/text-boxes-no-save.png" alt="No text boxes are saved." width="50%">
 <br>
-<img src="assets/images/text-boxes-one-save.png" alt="One text box is saved." width="50%">
+<img src="Assets/images/text-boxes-one-save.png" alt="One text box is saved." width="50%">
 <br>
-<img src="assets/images/text-boxes-two-saves.png" alt="Two text boxes are saved." width="50%">
+<img src="Assets/images/text-boxes-two-saves.png" alt="Two text boxes are saved." width="50%">
 <br>
 
 
@@ -74,9 +74,9 @@ WHEN I refresh the page
 - On page load, local storage is parsed and any saved time block text boxes are displayed in their appropriate spot using an array of objects in storage:
 <br>
 <br>
-<img src="assets/images/before-refresh.png" alt="Page before refresh with text boxes: some saved to local storage, some not." width="50%">
+<img src="Assets/images/before-refresh.png" alt="Page before refresh with text boxes: some saved to local storage, some not." width="50%">
 <br>
-<img src="assets/images/after-refresh.png" alt="Page after refresh displays all saved and not cleared text boxes." width="50%">
+<img src="Assets/images/after-refresh.png" alt="Page after refresh displays all saved and not cleared text boxes." width="50%">
 <br>
 <hr>
 <br>
@@ -99,7 +99,7 @@ This homework is graded based on the following criteria:
 
 ### Technical Acceptance Criteria: 40%
 
-* Satisfies all of the above acceptance criteria plus the following:
+- [x] * Satisfies all of the above acceptance criteria plus the following:
 
  - [x] * Uses the Moment.js library to work with date and time
 
